@@ -1,0 +1,49 @@
+@model FaleConosco;
+@{
+    ViewData["Title"] = "Fale Conosco";
+}
+
+<br>
+
+<h2>FALE CONOSCO</h2>
+    
+    <br>
+
+<h4>Entre em contato conosco enviando sua mensagem:</h4>
+
+<br>   
+
+<form method="POST" asp-action="PageF1FaleConosco">
+
+
+    <p>
+    <label asp-for="nome">NOME</label>
+    <input asp-for="nome" type="text" class="form-control" id="nome" onblur="validaNome()" placeholder="">
+    </p>
+
+    <p>
+    <label asp-for="telefone">Telefone / Whatsapp(Digite o código de área e o número sem traços, espaços ou pontos)</label>
+    <input asp-for="telefone" type="text" class="form-control" id="telefone" onblur="validaTelefone()" placeholder="">
+    </p>
+
+    <p>       
+    <label asp-for="email">E-mail</label>
+    <input asp-for="email" type="text" class="form-control" id="email" onblur="validaEmail()" placeholder="">
+    </p>
+
+    <p>
+    <label asp-for="mensagem">Mensagem</label>
+    <input asp-for="mensagem" type="text" class="form-control" id="mensagem" placeholder="">
+    </p>
+
+    <input type="submit" value="Enviar">
+
+<br>
+
+    <p class="mensagem-style">@ViewBag.Enviar</p>
+
+</form>
+    
+<br><br>
+
+    <p>Clique <a href="Index" class="button2">AQUI</a> para voltar à página inicial</p>

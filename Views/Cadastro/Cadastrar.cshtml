@@ -1,0 +1,39 @@
+@model Cadastro;
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+    <br>    
+
+
+<h2>Cadastro de Membros do Departamento</h2>
+
+<br>
+
+<form method="POST" asp-action="Cadastrar">
+
+    <input type="hidden" asp-for = "idcadastro" required>
+
+    <p>Nome: <input asp-for = "nome" required></p>
+    
+    <p>Curso: <input asp-for = "curso" required></p>
+    
+    <p>Telefone / Whatsapp: <input asp-for = "telefone" required></p>
+
+    <p>E-mail / Login: <input asp-for = "email" required></p>
+    
+    <p>Senha: <input asp-for = "senha" required></p>
+
+    <p>Data de Nascimento: <input asp-for = "datanascimento" required></p>
+
+    <input type="submit" value="Cadastrar">
+
+    <br>
+
+    <p class="mensagem-style">@ViewBag.Cadastrar</p>
+    
+</form>
+
+<br>
+<a href="/Cadastro/Restrito">Acesso Restrito</a>

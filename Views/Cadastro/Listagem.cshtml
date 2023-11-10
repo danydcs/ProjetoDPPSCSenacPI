@@ -1,0 +1,50 @@
+@model List<Cadastro>
+
+@{
+    ViewData["Title"] = "Listagem de membros";
+}
+
+<br>
+
+<h2>LISTA DE MEMBROS DO DEPARTAMENTO</h2>
+        
+    <br><br>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Curso</th>
+                <th>Telefone / Whatsapp</th>
+                <th>E-mail / Login</th>
+                <th>Senha</th>
+                <th>Data de Nascimento</th>
+                <th>Manutenção</th>
+            </tr>
+        </thead>
+
+        @foreach (Cadastro c in Model)
+        {
+            <tr>
+                <td>@c.idcadastro</td>
+                <td>@c.nome</td>
+                <td>@c.curso</td>
+                <td>@c.telefone</td>
+                <td>@c.email</td>
+                <td>@c.senha</td>
+                <td>@c.datanascimento</td>
+                <td>
+                    <a href="/Cadastro/Editar?idcadastro=@c.idcadastro">Editar</a> / <a href="/Cadastro/Deletar?idcadastro=@c.idcadastro">Excluir</a>
+                </td>
+            </tr>
+        }
+
+
+    </table>
+
+        <br><br>
+
+    <p>Clique <a href="Restrito" class="button2">AQUI</a> para voltar à página anterior</p>
+    <p>Clique <a href="Index" class="button2">AQUI</a> para voltar à página inicial</p>

@@ -1,0 +1,110 @@
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SITE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <div class="cabecalho">
+
+        <img width="1100" height="250" src="~/img/CabecalhoDPPSC.png">
+
+    </div>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3">
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-5">
+                        <li class="nav-item ml-4 mr-4">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">INÍCIO</a>
+                        </li>
+                        <li class="nav-item ml-4 mr-">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PageASobreDepto">SOBRE O
+                                DEPARTAMENTO</a>
+                        </li>
+                        <li class="nav-item ml-4 mr-4">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="PageBCorpoDocente">CORPO DOCENTE</a>
+                        </li>
+                        <li class="nav-item ml-4 mr-4">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="PageC1LaboratoriosNucleos">LABORATÓRIOS E NÚCLEOS</a>
+                        </li>
+                        <li class="nav-item ml-4 mr-4">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="PageD1ProjetosParcerias">PROJETOS E PARCERIAS</a>
+                        </li>
+                        <li class="nav-item ml-4 mr-4">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="PageE1NoticiasArtigos">NOTÍCIAS E ARTIGOS</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer mt-10">
+
+        <div class="rodape">
+
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3">
+
+                &copy; 2023 - Etapa_5 
+
+
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item ml-5 mr-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                            asp-action="PageF1FaleConosco">Fale Conosco</a>
+                    </li>
+                    <li class="nav-item ml-5 mr-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro"
+                            asp-action="Cadastrar">Cadastrar</a>
+                    </li>
+                    <li class="nav-item ml-5 mr-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro" asp-action="Login">Login</a>
+                    </li>
+                    @if (Context.Session.GetInt32("idcadastro") != null)
+                    {
+                        <li class="nav-item ml-5 mr-5">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro"
+                            asp-action="Restrito">Restrito</a>
+                        </li>
+                    }
+                    <li class="nav-item ml-5 mr-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro"
+                            asp-action="Logout">Logout</a>
+                    </li>
+                    <li class="nav-item ml-5 mr-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+        </div>
+
+        </nav>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

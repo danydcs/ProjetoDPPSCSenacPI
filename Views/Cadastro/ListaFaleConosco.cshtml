@@ -1,0 +1,42 @@
+@model List<FaleConosco>
+
+@{
+    ViewData["Title"] = "Listagem de contatos";
+}
+
+<br>
+
+<h2>LISTA DE CONTATOS</h2>
+        
+    <br><br>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Id Mensagem</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>                
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+
+        @foreach (FaleConosco msg in Model)
+        {
+            <tr>
+                <td>@msg.idfaleconosco</td>
+                <td>@msg.nome</td>
+                <td>@msg.email</td>
+                <td>@msg.telefone</td>
+                <td>@msg.mensagem</td>
+
+            </tr>
+        }
+
+    </table>
+
+        <br><br>
+
+    <p>Clique <a href="Restrito" class="button2">AQUI</a> para voltar à página anterior</p>
+    <p>Clique <a href="Index" class="button2">AQUI</a> para voltar à página inicial</p>

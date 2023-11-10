@@ -1,0 +1,23 @@
+@model Cadastro;
+@{
+    ViewData["Title"] = "Login";
+}
+
+<br>
+
+<form method="POST" asp-action="Login">
+
+    <p>Login: <input asp-for="email"></p>
+    <p>Senha: <input asp-for="senha"></p>
+    <input type="submit" value="Acessar">
+    
+    <br>
+
+</form>
+
+<p class="mensagem-style">@ViewBag.MensagemErro</p>
+
+<br>
+    <p>Clique <a href="index" class="button2">AQUI</a> para voltar à página inicial</p>
+<br>
+

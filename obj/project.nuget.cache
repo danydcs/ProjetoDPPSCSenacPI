@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "qqbU4gBdpEXdGILyUawWTdr1ccy601x6gpO8eQHyw7Lc/0imCcaahq+1IKEi++ELu60On18Rfa37MXMQ6OZZVQ==",
+  "success": true,
+  "projectFilePath": "H:\\Meu Drive\\DOCUMENTOS DANY\\Curso Técnico EAD\\Projeto Integrador\\Etapa 5\\DPPSC e5\\Etapa 3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniela\\.nuget\\packages\\mysqlconnector\\2.2.6\\mysqlconnector.2.2.6.nupkg.sha512",
+    "C:\\Users\\Daniela\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Daniela\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Daniela\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
